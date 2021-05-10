@@ -14,4 +14,20 @@
 
 <style>
 	/*每个页面公共css */
+	@font-face {
+		font-family: 'iconfont';
+		/* Project id 2537631 */
+		src: url('//at.alicdn.com/t/font_2537631_qbe6d040c78.woff2?t=1620618700126') format('woff2'),
+			url('//at.alicdn.com/t/font_2537631_qbe6d040c78.woff?t=1620618700126') format('woff'),
+			url('//at.alicdn.com/t/font_2537631_qbe6d040c78.ttf?t=1620618700126') format('truetype');
+	}
+
+	.iconfont {
+		font-family: "iconfont" !important;
+		font-size: 25px;
+		color: orange;
+		font-style: normal;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
 </style>
