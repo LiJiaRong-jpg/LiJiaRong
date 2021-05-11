@@ -13,6 +13,18 @@
 		},
 		methods: {
 			
+		},
+		onLoad() {
+			let that=this
+			uni.getStorage({
+			    key: 'dengLu',
+			    success: function (res) {
+					that.dengLu=true
+			    },
+				fail() {
+					that.dengLu=false
+				}
+			});
 		}
 	}
 </script>

@@ -42,16 +42,27 @@
 		</view>
 
 
-		<view class="c" style="width: 100%;margin-bottom: 1rem;height: 20rem;">
-			<view class="" v-for="(key , index) in chuChuang" style="width: 46%;margin-left: 2%;float: left;">
-				<image :src="key.spuImg" mode="" style="width: 100%;"></image>
-				<view style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;width: 80%;">
-					<text>{{key.spuTitle}}</text>
+		<view>
+			<scroll-view scroll-x="true" style="width: 100%;white-space:nowrap; height: 20rem">
+				<!-- tab 上半部分 -->
+				<view style="width: 100%;height: 20rem">
+					<view class="tab">
+						<view class="tab-navA" style='font-size:12px;width: 100%;'>
+							<view class="" v-for="(key , index) in chuChuang"
+								style="min-width: 50%; max-width: 50%; text-align: center; height: 4rem">
+								<image :src="key.spuImg" mode="" style="width: 100%;"></image>
+								<view style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;width: 80%;">
+									<text>{{key.spuTitle}}</text>
+								</view>
+								<text style="color: red;">￥{{key.spuPrice/100}}</text>
+								<text
+									style="text-decoration: line-through;color: #808080;">￥{{key.spuOriginalPrice}}</text>
+								<text>\n累计销售：{{key.spuSales}}件</text>
+							</view>
+						</view>
+					</view>
 				</view>
-				<text style="color: red;">￥{{key.spuPrice/100}}</text>
-				<text style="text-decoration: line-through;color: #808080;">￥{{key.spuOriginalPrice}}</text>
-				<text>累计销售：{{key.spuSales}}件</text>
-			</view>
+			</scroll-view>
 		</view>
 
 
@@ -114,7 +125,8 @@
 				nav: [], //轮播图下的导航条
 				nava: [], //精选的背景图
 				shopping: [], //商品栏
-				chuChuang: [] //橱窗推荐
+				chuChuang: [], //橱窗推荐
+				scrollTop: 0
 
 			}
 		},
@@ -135,13 +147,15 @@
 					that.nav = res.data.data.advertisement.t4
 					that.nava = res.data.data.advertisement.t2
 					that.shopping = res.data.data.salesTop
-					that.chuChuang.push(res.data.data.windowRecommend[0])
-					that.chuChuang.push(res.data.data.windowRecommend[1])
+					that.chuChuang = res.data.data.windowRecommend
 				}
 			});
 		},
 		methods: {
-
+			scroll: function(e) {
+				console.log(e)
+				this.scrollTop = e.detail.scrollTop
+			}
 		},
 		onPageScroll(res) { //页面滚动事件
 			this.top = res.scrollTop;
@@ -156,6 +170,37 @@
 </script>
 
 <style>
+	.tab {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.tab-nav {
+		height: 80rpx;
+		background: #fff;
+		display: flex;
+		line-height: 79rpx;
+		position: relative;
+	}
+
+	.tab-navA {
+		display: flex;
+	}
+
+	.tab-line {
+		position: absolute;
+		left: 0;
+		bottom: -1rpx;
+		height: 4rpx;
+		background: #FF0000;
+		transition: all 0.3s;
+	}
+
+	.tab-content {
+		flex: 1;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
 	.input {
 		position: fixed;
 		top: 0;
@@ -172,7 +217,7 @@
 	}
 
 	.input>input {
-		width: 70%;
+		width: 65%;
 		border: #C0C0C0 2rpx solid;
 		border-radius: 3rem;
 		padding-left: 0.5rem;
@@ -185,7 +230,6 @@
 
 	.input>text:last-child {
 		float: right;
-		margin-right: 0.5rem;
 	}
 
 	swiper {

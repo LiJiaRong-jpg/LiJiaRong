@@ -28,7 +28,43 @@
 			}
 
 		}
-	],
+	    ,{
+            "path" : "pages/my/quangBu/quangBu",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "我的订单",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/my/ress/ress",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "收货地址",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/my/collect/collect",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "商品收藏",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/my/profile/profile",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "修改资料",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		
 		"navigationBarTextStyle": "black",

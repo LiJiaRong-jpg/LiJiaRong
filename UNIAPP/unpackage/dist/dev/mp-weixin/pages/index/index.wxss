@@ -1,4 +1,43 @@
 
+.tab {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	        flex-direction: column;
+}
+.tab-nav {
+	height: 80rpx;
+	background: #fff;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	line-height: 79rpx;
+	position: relative;
+}
+.tab-navA {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+.tab-line {
+	position: absolute;
+	left: 0;
+	bottom: -1rpx;
+	height: 4rpx;
+	background: #FF0000;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.tab-content {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	        flex: 1;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
 .input {
 	position: fixed;
 	top: 0;
@@ -13,7 +52,7 @@
 	margin-left: 0.5rem;
 }
 .input>input {
-	width: 70%;
+	width: 65%;
 	border: #C0C0C0 2rpx solid;
 	border-radius: 3rem;
 	padding-left: 0.5rem;
@@ -24,7 +63,6 @@
 }
 .input>text:last-child {
 	float: right;
-	margin-right: 0.5rem;
 }
 swiper {
 	height: calc(93vw*5/5)

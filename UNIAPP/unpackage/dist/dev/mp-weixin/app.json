@@ -3,7 +3,11 @@
     "pages/index/index",
     "pages/classify/classify",
     "pages/my/my",
-    "pages/car/car"
+    "pages/car/car",
+    "pages/my/quangBu/quangBu",
+    "pages/my/ress/ress",
+    "pages/my/collect/collect",
+    "pages/my/profile/profile"
   ],
   "subPackages": [],
   "window": {

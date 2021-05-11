@@ -237,6 +237,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default =
 {
   data: function data() {
@@ -246,8 +257,9 @@ var _default =
       nav: [], //轮播图下的导航条
       nava: [], //精选的背景图
       shopping: [], //商品栏
-      chuChuang: [] //橱窗推荐
-    };
+      chuChuang: [], //橱窗推荐
+      scrollTop: 0 };
+
 
   },
   onLoad: function onLoad() {
@@ -267,13 +279,15 @@ var _default =
         that.nav = res.data.data.advertisement.t4;
         that.nava = res.data.data.advertisement.t2;
         that.shopping = res.data.data.salesTop;
-        that.chuChuang.push(res.data.data.windowRecommend[0]);
-        that.chuChuang.push(res.data.data.windowRecommend[1]);
+        that.chuChuang = res.data.data.windowRecommend;
       } });
 
   },
-  methods: {},
-
+  methods: {
+    scroll: function scroll(e) {
+      console.log(e);
+      this.scrollTop = e.detail.scrollTop;
+    } },
 
   onPageScroll: function onPageScroll(res) {//页面滚动事件
     this.top = res.scrollTop;

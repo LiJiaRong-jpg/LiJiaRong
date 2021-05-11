@@ -15,17 +15,17 @@
 <style>
 	/*每个页面公共css */
 	@font-face {
-		font-family: 'iconfont';
-		/* Project id 2537631 */
-		src: url('//at.alicdn.com/t/font_2537631_qbe6d040c78.woff2?t=1620618700126') format('woff2'),
-			url('//at.alicdn.com/t/font_2537631_qbe6d040c78.woff?t=1620618700126') format('woff'),
-			url('//at.alicdn.com/t/font_2537631_qbe6d040c78.ttf?t=1620618700126') format('truetype');
+	  font-family: 'iconfont';  /* Project id 2537631 */
+	  src: url('//at.alicdn.com/t/font_2537631_wixsvott07g.woff2?t=1620725527808') format('woff2'),
+	       url('//at.alicdn.com/t/font_2537631_wixsvott07g.woff?t=1620725527808') format('woff'),
+	       url('//at.alicdn.com/t/font_2537631_wixsvott07g.ttf?t=1620725527808') format('truetype');
 	}
 
 	.iconfont {
+		width: 7vh;
 		font-family: "iconfont" !important;
 		font-size: 25px;
-		color: orange;
+		color: black;
 		font-style: normal;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;

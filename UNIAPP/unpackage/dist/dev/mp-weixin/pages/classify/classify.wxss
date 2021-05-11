@@ -1,5 +1,9 @@
 
-.num{
-	background-color: #808080;
+.num {
+	background-color: #f8f8f8;
+}
+.indexText {
+	border-left: 10rpx solid #fe7b92;
+	color: #fe7b92;
 }
 
