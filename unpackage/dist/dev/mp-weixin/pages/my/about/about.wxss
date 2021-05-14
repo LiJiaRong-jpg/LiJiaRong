@@ -1,0 +1,25 @@
+
+.about>view>text:first-child{
+	float: left;
+}
+.about>view>text:last-child{
+	float: right;
+	color: #999999;
+}
+.about{
+	margin-bottom: 20vh;
+}
+.about>view{
+	width: 95%;
+	display: flow-root;
+	height: 2rem;
+	padding: 5px 10px;
+	border-bottom: #C0C0C0 solid 1px;
+}
+#about{
+	display: table;
+	margin: auto;
+	clear: both;
+	color: #C0C0C0;
+}
+

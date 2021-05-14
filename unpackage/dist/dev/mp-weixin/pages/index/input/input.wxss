@@ -1,0 +1,40 @@
+
+.inputA {
+	width: 100%;
+	height: 2rem;
+	padding: 5px 0;
+	background-color: #f2f2f2;
+}
+.inputA>view {
+	width: 80%;
+	margin: auto;
+	border-radius: 2rem;
+	padding-left: 1rem;
+	background-color: white;
+	height: 2rem;
+	overflow: hidden;
+}
+.inputA>view>input {
+	line-height: 2rem;
+	margin-top: 5px;
+	float: left;
+}
+.inputA>view>view {
+	float: right;
+}
+.inputA>view>view>view {
+	float: left;
+}
+.inputA>view>view>view:last-child {
+	padding: 0 19px;
+	background: -webkit-linear-gradient(left, #ff9801, #ff570a);
+	background: linear-gradient(to right, #ff9801, #ff570a);
+	line-height: 2rem;
+	color: #fff;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.inputA>view>view>view:first-child {
+	line-height: 2rem;
+}
+

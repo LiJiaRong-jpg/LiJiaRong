@@ -1,0 +1,19 @@
+
+.buttom>button{
+	display: inline-block;
+}
+.buttom{
+		width: 40%;
+		overflow:hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	float: left;
+}
+.img{
+	float: left;
+}
+.img>image{
+	width: 30vh;
+    height: 30vh;
+}
+

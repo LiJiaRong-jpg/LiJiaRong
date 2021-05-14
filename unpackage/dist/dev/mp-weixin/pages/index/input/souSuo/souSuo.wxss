@@ -1,0 +1,40 @@
+
+.nav {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+.nav>view {
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+.col {
+	color: #fc4369;
+}
+.col>text {
+	border-bottom: 5px solid #FC4369;
+}
+.nav text {
+	line-height: 3rem;
+	display: inline-block;
+	width: 40%;
+}
+.shopping {
+	width: 50%;
+	float: left;
+}
+.shopping>view {
+	width: 100%;
+	overflow:hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.shopping>view:last-child>text:first-child {
+	float: left;
+	color: #FC4369;
+}
+.shopping>view:last-child>text:last-child {
+	float: right;
+}
+

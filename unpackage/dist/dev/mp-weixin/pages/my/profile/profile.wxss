@@ -1,0 +1,59 @@
+
+.about>view>text:first-child {
+	float: left;
+}
+.about>view>text:last-child {
+	float: right;
+	color: #999999;
+}
+.about {
+	margin-bottom: 20vh;
+}
+.about>view {
+	width: 95%;
+	display: flow-root;
+	height: 2rem;
+	padding: 5px 10px;
+	border-bottom: #C0C0C0 solid 1px;
+}
+.gai {
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	z-index: 999;
+	background: rgba(0, 0, 0, 0.5);
+	top: 0;
+	box-sizing: border-box;
+}
+.gai>view {
+	width: 70%;
+	height: 21vh;
+	margin: auto;
+	margin-top: 33vh;
+	background-color: white;
+	border-radius: 1rem;
+}
+.gai>view>text:first-child {
+	text-align: center;
+	display: block;
+	line-height: 8vh;
+	border-bottom: #C0C0C0 solid 1px;
+}
+.gaI>text {
+	display: inline-block;
+	width: 50%;
+	text-align: center;
+	line-height: 4vh;
+	box-sizing: border-box;
+	line-height: 9vh;
+}
+.gaI{
+	border-top: #C0C0C0 solid 1px;
+}
+.gaI>text:first-child{
+	border-right: #C0C0C0 solid 1px;
+}
+.gai input{
+	padding-left: 10px;
+}
+
