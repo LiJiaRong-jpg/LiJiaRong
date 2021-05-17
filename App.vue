@@ -5,9 +5,9 @@
 	/*每个页面公共css */
 	@font-face {
 	  font-family: 'iconfont';  /* Project id 2537631 */
-	  src: url('//at.alicdn.com/t/font_2537631_t4ra3c7fx5o.woff2?t=1620894753376') format('woff2'),
-	       url('//at.alicdn.com/t/font_2537631_t4ra3c7fx5o.woff?t=1620894753376') format('woff'),
-	       url('//at.alicdn.com/t/font_2537631_t4ra3c7fx5o.ttf?t=1620894753376') format('truetype');
+	  src: url('//at.alicdn.com/t/font_2537631_tgtgwo5uet8.woff2?t=1621253531512') format('woff2'),
+	       url('//at.alicdn.com/t/font_2537631_tgtgwo5uet8.woff?t=1621253531512') format('woff'),
+	       url('//at.alicdn.com/t/font_2537631_tgtgwo5uet8.ttf?t=1621253531512') format('truetype');
 	}
 
 	.iconfont {
