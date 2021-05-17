@@ -12,7 +12,10 @@
     "pages/my/role/role",
     "pages/index/input/input",
     "pages/index/input/souSuo/souSuo",
-    "pages/my/about/about"
+    "pages/my/about/about",
+    "pages/index/input/souSuo/xiangQing/xiangQing",
+    "pages/index/input/souSuo/dingDang/dingDang",
+    "pages/index/input/tuang/tuang"
   ],
   "subPackages": [],
   "window": {

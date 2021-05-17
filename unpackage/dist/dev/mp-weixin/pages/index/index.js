@@ -263,9 +263,9 @@ var _default =
       chuChuang: [], //橱窗推荐
       scrollTop: 0 };
 
-
   },
   onLoad: function onLoad() {
+    uni.clearStorage();
     var that = this;
     uni.request({
       url: 'http://192.168.1.84:8081/m.api',
@@ -294,6 +294,48 @@ var _default =
       uni.navigateTo({
         url: "./input/input" });
 
+    },
+    Shopp: function Shopp(e) {
+      uni.getStorage({
+        key: 'dengLu',
+        success: function success() {
+          uni.setStorage({
+            key: 'id',
+            data: e,
+            success: function success() {
+              uni.navigateTo({
+                url: 'input/souSuo/xiangQing/xiangQing' });
+
+            } });
+
+        },
+        fail: function fail() {
+          uni.navigateTo({
+            url: '../my/role/role' });
+
+        } });
+
+    },
+    SHopp: function SHopp(e) {
+      var a = e.split("=");
+      console.log(e);
+      if (a[0].length == 23) {
+        uni.setStorage({
+          key: 'titleA',
+          data: a[1],
+          success: function success(res) {
+            uni.navigateTo({
+              url: 'input/souSuo/souSuo' });
+
+          } });
+
+      } else if (a[0].length == 21) {
+        uni.navigateTo({
+          url: 'input/tuang/tuang' });
+
+      } else if (a[0].length == 24) {
+        this.Shopp(a[1]);
+      }
     } },
 
   onPageScroll: function onPageScroll(res) {//页面滚动事件

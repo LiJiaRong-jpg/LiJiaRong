@@ -109,6 +109,33 @@
             }
             
         }
+        ,{
+            "path" : "pages/index/input/souSuo/xiangQing/xiangQing",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "详情展示",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/input/souSuo/dingDang/dingDang",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "订单",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/input/tuang/tuang",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "团购列表",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		

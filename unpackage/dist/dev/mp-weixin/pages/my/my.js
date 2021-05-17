@@ -236,6 +236,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 var startY = 0,
 moveY = 0,
@@ -253,7 +257,10 @@ pageAtTop = true;var _default2 =
       coverTransition: '0s',
       moving: false,
       dengLu: true, //是否登录
-      resd: null //数据
+      resd: {
+        nickname: '未登录',
+        avatarUrl: '' }
+      //数据
     };
   },
   methods: {
@@ -338,25 +345,36 @@ pageAtTop = true;var _default2 =
   onShow: function onShow() {
     var that = this;
     uni.getStorage({
-      key: 'resd',
+      key: 'dengLu',
       success: function success(res) {
         that.resd = res.data;
+        that.dengLu = false;
+      },
+      fail: function fail() {
+        that.dengLu = true;
       } });
 
-    uni.request({
-      url: 'http://192.168.1.84:8081/m.api', //仅为示例，并非真实接口地址。
-      data: {
-        _gp: 'user',
-        _mt: 'login',
-        phone: '13587878787',
-        password: 'asd123456',
-        ip: '1' },
-
-      header: {
-        "Content-type": "application/x-www-form-urlencoded" },
-
+    uni.getStorage({
+      key: 'phone',
       success: function success(res) {
-        that.resd = res.data.data;
+        uni.request({
+          url: 'http://192.168.1.84:8081/m.api',
+          data: {
+            _gp: 'user',
+            _mt: 'login',
+            phone: res.data[0],
+            password: res.data[1],
+            ip: '1' },
+
+          header: {
+            "Content-type": "application/x-www-form-urlencoded" },
+
+          success: function success(res) {
+            if (that.resd != res.data.data) {
+              that.resd = res.data.data;
+            }
+          } });
+
       } });
 
   } };exports.default = _default2;

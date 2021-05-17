@@ -1,6 +1,10 @@
 
-.buttom>button {
-	display: inline-block;
+.img {
+	float: left;
+}
+.img>image {
+	width: 30vh;
+	height: 30vh;
 }
 .buttom {
 	width: 40%;
@@ -8,12 +12,5 @@
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	float: left;
-}
-.img {
-	float: left;
-}
-.img>image {
-	width: 30vh;
-	height: 30vh;
 }
 
